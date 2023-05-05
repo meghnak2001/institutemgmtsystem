@@ -1,0 +1,82 @@
+.outer{min-height: 100px; margin-top: 2%;}
+
+.counter{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    width: 200px;
+    padding: 7px 0 10px;
+    margin: 0 auto;
+}
+.counter .counter-content{
+    color: #000;
+    background-color: #fff;
+    height: 185px;
+    width: 185px;
+    padding: 38px 12px 20px;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15),0 0 0 6px #fff, 0 0 7px rgba(0,0,0,0.15);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.counter .counter-content:before,
+.counter .counter-content:after{
+    content: '';
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    position: absolute;
+    left: 7px;
+    right: 7px;
+    top: 7px;
+    bottom: 7px;
+    z-index: -1;
+}
+.counter .counter-content:after{
+    background: linear-gradient(to right,#34B848,#B0ED25);
+    box-shadow: none;
+    border-radius: 0;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    z-index: -2;
+}
+.counter .counter-value{
+    color: #34B848;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 5px;
+    display: block;
+}
+.counter h3{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.counter .counter-icon{
+    color: #fff;
+    background: linear-gradient(to right,#34B848,#B0ED25);
+    font-size: 35px;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+    margin: -30px auto 0;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5),0 0 0 10px rgba(255,255,255,0.4);
+    position: relative;
+    z-index: 1;
+}
+.counter.blue .counter-content:after,
+.counter.blue .counter-icon{
+    background: linear-gradient(to right,#0779EC,#04CAEF);
+}
+.counter.blue .counter-value{ color: #0779EC; }
+@media screen and (max-width:990px){
+    .counter{ margin-bottom: 40px; }
+}
